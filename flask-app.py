@@ -1,8 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request , os
 import pickle
 app = Flask(__name__,template_folder='templateFiles', static_folder='staticFiles')
 filename = 'model-files/finalized_model.pkl'
 loaded_model = pickle.load(open(filename, 'rb'))
+port = int(os.environ.get("PORT", 5000))
+
+
 y_map = {0: 'Bream',
  1: 'Parkki',
  2: 'Perch',
@@ -29,4 +32,4 @@ def results():
 
 
 if __name__=='__main__':
-    app.run(host='0.0.0.0',debug=True,port=5000)
+    app.run(host='0.0.0.0',debug=True,port=port)
