@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request , os
+from flask import Flask, render_template, request
+import  os
 import pickle
 app = Flask(__name__,template_folder='templateFiles', static_folder='staticFiles')
 filename = 'model-files/finalized_model.pkl'
