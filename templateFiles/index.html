@@ -1,0 +1,54 @@
+<html>
+   <head>
+      <!--  Load CSS in Flask with html-->
+          <link rel="stylesheet" href='/staticFiles/main.css' />
+       
+      <!--  Load JavaScript in Flask with html-->
+        <script>
+         //  alert("Page has been loaded successfully")
+        </script>
+       
+   </head>
+   <body>
+      <div class="input-box">
+         <h2>Input for the predictions</h2>
+         <form action = "http://localhost:5000/results" method = "POST">
+           <div class="user-box">
+             <input type="text" name="Weight" required="">
+             <label>Weight</label>
+           </div>
+           <div class="user-box">
+             <input type="text" name="Length1" required="">
+             <label>Length1</label>
+           </div>
+           <div class="user-box">
+            <input type="text" name="Length2" required="">
+            <label>Length2</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="Length3" required="">
+            <label>Length3</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="Height" required="">
+            <label>Height</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="Width" required="">
+            <label>Width</label>
+          </div>
+           <button type="submit" name="" value="" class="btn-link">Predict</button>
+           <!-- <a href="http://localhost:5000/results"> -->
+             <span></span>
+             <span></span>
+             <span></span>
+             <span></span>
+             <!-- Predict -->
+         </form>
+       </div>
+      <!-- <form action = "http://localhost:9999/result" method = "POST">
+         <p>Year <input type = "text" name = "year" /></p>
+      </form> -->
+   </body>
+</html>
+
