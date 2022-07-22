@@ -23,7 +23,7 @@ def index():
 def results():
     form = request.form.values()
     if request.method == 'POST':
-        vals = [int(i) for i in list(form)]
+        vals = [float(i) for i in list(form)]
         print([vals])
         predicted_Species = loaded_model.predict([vals])
         species = y_map.get(predicted_Species[0])
