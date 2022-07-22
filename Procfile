@@ -1,2 +1,2 @@
-web: gunicorn --bind 0.0.0.0:5000 wsgi:flask-app
+web: python flask-app.py
 worker: python flask-app.py 
